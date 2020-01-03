@@ -11,6 +11,7 @@ class TopicStore {
   @observable topics: Array<ITopic> = topics;
   @observable chartStartDate: string = "";
   @observable chartEnDate: string = "";
+  @observable isModalOpen: boolean = false;
 
   @action setCurrentTopic = (topicId: any) => {
     const newTopic = topics.find(topic => topic.id === topicId);
