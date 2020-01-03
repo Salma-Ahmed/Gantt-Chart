@@ -1,0 +1,72 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "title": "christmas",
+      "campaigns": [
+        {
+          "id": 1,
+          "title": "Facebook",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "startDate": "05/01/2019",
+          "endDate": "05/02/2019",
+          "color": "rgb(171, 71, 188)"
+        },
+        {
+          "id": 2,
+          "title": "Twitter",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "startDate": "08/02/2019",
+          "endDate": "08/20/2019",
+          "color": "lightblue"
+        },
+        {
+          "id": 3,
+          "title": "Instgram",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "startDate": "11/03/2019",
+          "endDate": "11/09/2019",
+          "color": "red"
+        },
+        {
+          "id": 4,
+          "title": "Campaign",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "startDate": "10/17/2019",
+          "endDate": "10/22/2019",
+          "color": "rgb(242, 166, 0)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "New Year",
+      "campaigns": [
+        {
+          "id": 5,
+          "title": "Facebookk",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "startDate": "05/01/2019",
+          "endDate": "07/01/2019",
+          "color": "darkblue"
+        },
+        {
+          "id": 8,
+          "title": "Twitterr",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "startDate": "08/02/2019",
+          "endDate": "11/02/2019",
+          "color": "lightblue"
+        },
+        {
+          "id": 9,
+          "title": "Instgramm",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "startDate": "10/03/2019",
+          "endDate": "16/03/2019",
+          "color": "darkBrown"
+        }
+      ]
+    }
+  ]
+}
