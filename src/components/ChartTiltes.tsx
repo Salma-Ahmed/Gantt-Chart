@@ -15,13 +15,16 @@ const ChartTitles: React.FC = (): JSX.Element => {
   return (
     <div className={classes.titles}>
       <Grid container spacing={0}>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           Campaign
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           Start date
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
+          End date
+        </Grid>
+        <Grid item xs={3}>
           Duration
         </Grid>
       </Grid>

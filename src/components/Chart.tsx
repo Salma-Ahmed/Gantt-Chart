@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TopicStoreContext } from "../stores/TopicsStore";
 import { observer } from "mobx-react";
@@ -27,7 +27,11 @@ const Chart: React.FC = observer(
   (): JSX.Element => {
     const classes = useStyles();
     const topicStore = useContext(TopicStoreContext);
-    const [topic] = useState(topicStore.currentTopic);
+    const [topic, setTopic] = useState(topicStore.currentTopic);
+
+    useEffect(() => {
+      setTopic(topicStore.currentTopic);
+    });
 
     return (
       <div className={classes.chart}>

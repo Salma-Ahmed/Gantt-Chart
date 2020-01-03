@@ -3,6 +3,7 @@ import { observer } from "mobx-react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TopicStoreContext } from "../stores/TopicsStore";
 import Moment from "react-moment";
+import uuid from "uuid";
 
 const useStyles = makeStyles({
   timeline: {
@@ -63,15 +64,14 @@ const Timeline: React.FC = observer(
         .add(i, "day")
         .toDate();
       daysItems.push(
-        <div className={classes.day}>
+        <div key={uuid()} className={classes.day}>
           <Moment format="MMM DD">{date}</Moment>
         </div>
       );
     }
 
-    /**get all dates between earliest and latest date */
-
-    const dates: Array<any> = [];
+    topicStore.chartStartDate = earliestDate;
+    topicStore.chartEnDate = latestDate;
 
     return <div className={classes.timeline}>{daysItems}</div>;
   }
