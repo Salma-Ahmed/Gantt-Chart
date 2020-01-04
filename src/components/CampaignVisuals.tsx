@@ -53,11 +53,7 @@ const CampaignVisuals: React.FC<{ campaign: ICampaign }> = observer(
         newEnddate = moment(endDate)
           .add(1, "day")
           .format("MM/DD/YYYY");
-        topicStore.changeCampaignStartDate(
-          campaign.id,
-          newStartdate,
-          newEnddate
-        );
+        topicStore.changeCampaignDates(campaign.id, newStartdate, newEnddate);
       } else if (position.deltaX === -60) {
         newStartdate = moment(startDate)
           .subtract(1, "day")
@@ -65,11 +61,7 @@ const CampaignVisuals: React.FC<{ campaign: ICampaign }> = observer(
         newEnddate = moment(endDate)
           .subtract(1, "day")
           .format("MM/DD/YYYY");
-        topicStore.changeCampaignStartDate(
-          campaign.id,
-          newStartdate,
-          newEnddate
-        );
+        topicStore.changeCampaignDates(campaign.id, newStartdate, newEnddate);
       } else {
       }
     };
@@ -77,7 +69,6 @@ const CampaignVisuals: React.FC<{ campaign: ICampaign }> = observer(
     useEffect(() => {
       setLeft(`${diff * 60}px`);
     }, [campaign]);
-    console.log("innn");
     return (
       <div className={classes.visuals}>
         <Draggable axis="x" grid={[60, 0]} bounds="parent" onDrag={handleDrag}>

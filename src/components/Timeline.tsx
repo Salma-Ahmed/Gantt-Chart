@@ -26,34 +26,10 @@ const Timeline: React.FC = observer(
   (): JSX.Element => {
     const classes = useStyles();
     const topicStore = useContext(TopicStoreContext);
-
-    /**Intialize dates arrays */
-    const startDates: Array<string> = [];
-    const endDates: Array<string> = [];
-
-    topicStore.currentTopic.campaigns.forEach(campaign => {
-      startDates.push(campaign.startDate);
-      endDates.push(campaign.endDate);
-    });
-
-    /**Intialize earliestDate and latestdate */
-    let earliestDate: string = startDates[0];
-    let latestDate: string = endDates[0];
+    const earliestDate = topicStore.chartStartDate;
+    const latestDate = topicStore.chartEnDate;
 
     const moment = require("moment");
-
-    /**get earliest date and latest date */
-    for (let i = 0; i < startDates.length; i++) {
-      if (moment(startDates[i]).isBefore(moment(earliestDate))) {
-        earliestDate = startDates[i];
-      }
-    }
-
-    for (let i = 0; i < endDates.length; i++) {
-      if (moment(endDates[i]).isAfter(moment(latestDate))) {
-        latestDate = endDates[i];
-      }
-    }
 
     /**count number of days based on earliest and latest dates */
     const days = moment(latestDate).diff(moment(earliestDate), "days");
@@ -69,9 +45,6 @@ const Timeline: React.FC = observer(
         </div>
       );
     }
-
-    topicStore.chartStartDate = earliestDate;
-    topicStore.chartEnDate = latestDate;
 
     return <div className={classes.timeline}>{daysItems}</div>;
   }

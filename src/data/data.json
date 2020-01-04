@@ -3,12 +3,14 @@
     {
       "id": 1,
       "title": "Topic1",
+      "startDate": "05/01/2019",
+      "endDate": "06/20/2019",
       "campaigns": [
         {
           "id": 1,
           "title": "Campaign1",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "startDate": "05/01/2019",
+          "startDate": "05/03/2019",
           "endDate": "05/05/2019",
           "color": "rgb(171, 71, 188)"
         },
@@ -89,6 +91,8 @@
     {
       "id": 2,
       "title": "Topic2",
+      "startDate": "09/01/2019",
+      "endDate": "10/10/2019",
       "campaigns": [
         {
           "id": 1,

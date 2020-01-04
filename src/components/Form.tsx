@@ -11,7 +11,7 @@ const Form: React.FC = (): JSX.Element => {
 
   return (
     <form className={classes.form} noValidate autoComplete="off">
-      <TextField id="campaign-name" label="Standard" />
+      <TextField id="campaign-name" label="Title" />
     </form>
   );
 };
