@@ -40,6 +40,7 @@ const Chart: React.FC = observer(
     const [topic, setTopic] = useState(topicStore.currentTopic);
 
     const openModal = () => {
+      topicStore.isForm = true;
       topicStore.isModalOpen = true;
     };
 
@@ -62,7 +63,7 @@ const Chart: React.FC = observer(
                 onClick={openModal}
                 className={classes.addButton}
               >
-                Add campaign
+                Add Campaign
               </Button>
             </div>
           </Grid>

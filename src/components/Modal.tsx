@@ -15,6 +15,7 @@ import Typography from "@material-ui/core/Typography";
 import { observer } from "mobx-react";
 import { TopicStoreContext } from "../stores/TopicsStore";
 import Form from "./Form";
+import CampaignDetails from "./CampaignDetails";
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -71,6 +72,9 @@ const Modal: React.FC = observer(
   (): JSX.Element => {
     const topicStore = useContext(TopicStoreContext);
     const [open, setOpen] = useState(topicStore.isModalOpen);
+    const [isForm, setIsForm] = useState(topicStore.isForm);
+    const [currentCampaignTitle, setTitle] = useState("");
+    const [currentCampaignColor, setColor] = useState("");
 
     const handleClose = () => {
       topicStore.isModalOpen = false;
@@ -78,7 +82,11 @@ const Modal: React.FC = observer(
 
     useEffect(() => {
       setOpen(topicStore.isModalOpen);
+      setIsForm(topicStore.isForm);
+      setTitle(topicStore.currentOpenedCampaign?.title);
+      setColor(topicStore.currentOpenedCampaign?.color);
     });
+
     return (
       <div>
         <Dialog
@@ -87,12 +95,18 @@ const Modal: React.FC = observer(
           open={open}
         >
           <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-            Campaign
+            {isForm ? (
+              "New Campaign"
+            ) : (
+              <span style={{ color: currentCampaignColor }}>
+                {currentCampaignTitle}
+              </span>
+            )}
           </DialogTitle>
           <DialogContent dividers>
-            <Form />
+            {isForm && <Form />}
+            {!isForm && <CampaignDetails />}
           </DialogContent>
-          <DialogActions></DialogActions>
         </Dialog>
       </div>
     );

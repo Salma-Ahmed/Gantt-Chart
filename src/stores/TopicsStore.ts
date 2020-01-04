@@ -1,6 +1,7 @@
 import { observable, action } from "mobx";
 import { createContext } from "react";
 import ITopic from "../interfaces/topic.interface";
+import ICampaign from "../interfaces/campaign.interface";
 
 const data = require("../data/data.json");
 const topics: Array<ITopic> = data.topics;
@@ -11,6 +12,8 @@ class TopicStore {
   @observable chartStartDate: string = this.currentTopic.startDate;
   @observable chartEnDate: string = this.currentTopic.endDate;
   @observable isModalOpen: boolean = false;
+  @observable currentOpenedCampaign: ICampaign;
+  @observable isForm: boolean;
 
   @action setCurrentTopic = (topicId: any) => {
     const newTopic = topics.find(topic => topic.id === topicId);

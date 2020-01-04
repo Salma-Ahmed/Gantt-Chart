@@ -117,7 +117,7 @@ const Form: React.FC = observer(
               />
             </Grid>
             <Grid container direction="column" item xs={3}>
-              <label className={classes.label}>End date</label>
+              <label className={classes.label}>Color</label>
               <input
                 type="color"
                 name="color"
@@ -147,7 +147,7 @@ const Form: React.FC = observer(
           color="primary"
           className={classes.submitBtn}
         >
-          Add Campaign
+          Add
         </Button>
       </form>
     );
