@@ -15,7 +15,7 @@ const ChartTitles: React.FC = (): JSX.Element => {
   return (
     <div className={classes.titles}>
       <Grid container spacing={0}>
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           Campaign
         </Grid>
         <Grid item xs={3}>
@@ -24,7 +24,7 @@ const ChartTitles: React.FC = (): JSX.Element => {
         <Grid item xs={3}>
           End date
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2}>
           Duration
         </Grid>
       </Grid>

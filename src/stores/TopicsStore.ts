@@ -1,7 +1,6 @@
 import { observable, action } from "mobx";
 import { createContext } from "react";
 import ITopic from "../interfaces/topic.interface";
-import ICampaign from "../interfaces/campaign.interface";
 
 const data = require("../data/data.json");
 const topics: Array<ITopic> = data.topics;

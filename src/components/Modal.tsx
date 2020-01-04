@@ -5,7 +5,6 @@ import {
   withStyles,
   WithStyles
 } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";
 import MuiDialogContent from "@material-ui/core/DialogContent";
@@ -93,11 +92,7 @@ const Modal: React.FC = observer(
           <DialogContent dividers>
             <Form />
           </DialogContent>
-          <DialogActions>
-            <Button autoFocus onClick={handleClose} color="primary">
-              Add Campaign
-            </Button>
-          </DialogActions>
+          <DialogActions></DialogActions>
         </Dialog>
       </div>
     );

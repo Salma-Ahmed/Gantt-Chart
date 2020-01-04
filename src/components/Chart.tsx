@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { TopicStoreContext } from "../stores/TopicsStore";
 import { observer } from "mobx-react";
 import uuid from "uuid";
-import CampaignDetails from "./CampaignDetails";
-import CampaignVisulas from "./CampaignVisuals";
+import ChartDetails from "./ChartDetails";
+import ChartGraph from "./ChartGraph";
 import Grid from "@material-ui/core/Grid";
 import ChartTitles from "./ChartTiltes";
 import Timeline from "./Timeline";
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     borderRadius: "5px",
     minWidth: "40px",
     height: "40px",
-    margin: "0 10px 10px",
+    margin: "10px 10px",
     textTransform: "capitalize"
   }
 });
@@ -54,7 +54,7 @@ const Chart: React.FC = observer(
             <div className={classes.details}>
               <ChartTitles />
               {topic.campaigns.map(campaign => (
-                <CampaignDetails key={uuid()} campaign={campaign} />
+                <ChartDetails key={uuid()} campaign={campaign} />
               ))}
               <Button
                 variant="outlined"
@@ -76,7 +76,7 @@ const Chart: React.FC = observer(
             <div>
               <Timeline />
               {topic.campaigns.map(campaign => (
-                <CampaignVisulas key={uuid()} campaign={campaign} />
+                <ChartGraph key={uuid()} campaign={campaign} />
               ))}
             </div>
           </Grid>

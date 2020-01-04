@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   }
 });
 
-const CampaignVisuals: React.FC<{ campaign: ICampaign }> = observer(
+const ChartGraph: React.FC<{ campaign: ICampaign }> = observer(
   ({ campaign }): JSX.Element => {
     const classes = useStyles();
     const topicStore = useContext(TopicStoreContext);
@@ -86,4 +86,4 @@ const CampaignVisuals: React.FC<{ campaign: ICampaign }> = observer(
   }
 );
 
-export default CampaignVisuals;
+export default ChartGraph;

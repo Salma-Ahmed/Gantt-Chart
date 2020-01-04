@@ -20,13 +20,18 @@ const useStyles = makeStyles({
   }
 });
 
-const CampaignDetails: React.FC<{ campaign: ICampaign }> = observer(
+const ChartDetails: React.FC<{ campaign: ICampaign }> = observer(
   ({ campaign }): JSX.Element => {
     const classes = useStyles();
+    const moment = require("moment");
+    const noOfDays = moment(campaign.endDate).diff(
+      moment(campaign.startDate),
+      "days"
+    );
     return (
       <div className={classes.campaign} style={{ color: campaign.color }}>
         <Grid container spacing={0}>
-          <Grid item xs={3}>
+          <Grid item xs={4}>
             {campaign.title}
           </Grid>
           <Grid item xs={3}>
@@ -35,12 +40,8 @@ const CampaignDetails: React.FC<{ campaign: ICampaign }> = observer(
           <Grid item xs={3}>
             <Moment format="MMM DD">{campaign.endDate}</Moment>
           </Grid>
-          <Grid item xs={3}>
-            <Moment
-              duration={campaign.startDate}
-              date={campaign.endDate}
-              unit="days"
-            />
+          <Grid item xs={2}>
+            <div>{`${noOfDays + 1} days`}</div>
           </Grid>
         </Grid>
       </div>
@@ -48,4 +49,4 @@ const CampaignDetails: React.FC<{ campaign: ICampaign }> = observer(
   }
 );
 
-export default CampaignDetails;
+export default ChartDetails;
