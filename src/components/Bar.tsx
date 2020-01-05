@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Topics from "./Topics";
+import logo from "../logo.jpg";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,6 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     topic: {
       marginRight: theme.spacing(2)
+    },
+    logo: {
+      width: "50px",
+      marginRight: "10px"
     }
   })
 );
@@ -31,14 +36,15 @@ const Bar: React.FC = (): JSX.Element => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
+          <img src={logo} className={classes.logo} />
+          {/* <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography variant="h6" className={classes.title}>
             Gantt Chart
           </Typography>
