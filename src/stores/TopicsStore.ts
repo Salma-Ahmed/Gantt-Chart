@@ -36,14 +36,6 @@ class TopicStore {
       }
     });
   };
-
-  @action getCampaign = (campaignId: number): any => {
-    this.currentTopic.campaigns.forEach(campaign => {
-      if (campaign.id === campaignId) {
-        return campaign;
-      }
-    });
-  };
 }
 
 export const TopicStoreContext = createContext(new TopicStore());

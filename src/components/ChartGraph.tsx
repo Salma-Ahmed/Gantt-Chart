@@ -43,7 +43,6 @@ const ChartGraph: React.FC<{ campaign: ICampaign }> = observer(
     const [left, setLeft] = useState(`${diff * 60}px`);
 
     const handleDrag = (e: any, position: any) => {
-      console.log(position);
       let newStartdate: string;
       let newEnddate: string;
       if (position.deltaX === 60) {

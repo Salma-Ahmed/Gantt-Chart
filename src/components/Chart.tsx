@@ -46,7 +46,7 @@ const Chart: React.FC = observer(
 
     useEffect(() => {
       setTopic(topicStore.currentTopic);
-    });
+    }, [topicStore.currentTopic]);
 
     return (
       <div className={classes.chart}>
